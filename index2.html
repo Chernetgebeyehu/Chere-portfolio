@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chere_Boy</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    body {
+      background-color: rgb(250, 250, 250);
+    }
+    #sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    header {
+      left: 250px;
+      position: relative;
+    }
+    main {
+      left: 250px;
+      position: relative;
+    }
+    * {
+      font-family: sans-serif;
+    }
+
+    #first-image {
+      border-radius: 54px;
+      object-fit: cover;
+      object-position: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;"> <a href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"> <svg
+        class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
+        <use xlink:href="#bootstrap"></use>
+      </svg> <span class="fs-4">Sidebar</span> </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <svg class="bi pe-none me-2"
+            width="16" height="16" aria-hidden="true">
+            <use xlink:href="#home"></use>
+          </svg>
+          Home
+        </a> </li>
+      <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            aria-hidden="true">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Dashboard
+        </a> </li>
+      <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            aria-hidden="true">
+            <use xlink:href="#table"></use>
+          </svg>
+          Orders
+        </a> </li>
+      <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            aria-hidden="true">
+            <use xlink:href="#grid"></use>
+          </svg>
+          Products
+        </a> </li>
+      <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            aria-hidden="true">
+            <use xlink:href="#people-circle"></use>
+          </svg>
+          Customers
+        </a> </li>
+    </ul>
+    <hr>
+    <div class="dropdown"> 
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown" aria-expanded="false">
+         <img src="./Snapchat-1390405735.jpg" alt="" width="70"
+          height="70" class="rounded-circle me-2" style="object-fit: cover;
+          object-position: center;"> 
+          <strong>mdo</strong> 
+        </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <header class="p-3 mb-3 border-bottom" style="background-color:rgb(235, 245, 253)">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fs-5">
+          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Customers</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
+        </ul>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" style="width: 350px;
+          height: 57px;" placeholder="Search..." aria-label="Search">
+        </form>
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="./Snapchat-1390405735.jpg" style="
+            object-fit: cover;
+            object-position: center;" alt="mdo" width="100" height="100" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <h1 class="visually-hidden">Heroes examples</h1>
+    <div class="px-4 py-5 my-5 text-center container col-xxl-8" style="display: flex;">
+      <div>
+        <img id="first-image" class="d-block mx-auto mb-4 rounded-circle" src="./Snapchat-1390405735.jpg " alt=""
+          width="450" height="450">
+        <h1 class="display-5 fw-bold text-body-emphasis" style="color: rgb(23, 203, 216) !important;">Cherinet Gebeyehu
+        </h1>
+        <h2 class="mb-4" style="color: rgb(47, 182, 192) !important;">Fullstack Web developer</h2>
+      </div>
+
+      <div class="col-lg-6 mx-auto py-5" style="margin-top: 100px;">
+        <p class="lead mb-4" style="font-size: 25px;">Welcome to my website . <br />
+          Hi my name is Cherinet Gebeyehu I'm from Ethiopia . I am learning to become a fullstack web developer,
+          and I'm also a grade 12<sup>th</sup>student so eventhough it is a litte bit hard to do both but I'm
+          stragling to balance it.
+          So I need your support.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
+            class="btn btn-outline-primary btn-lg px-4 gap-3">I'll support you</button> <button type="button"
+            class="btn btn-info btn-lg px-4">I won't support you</button> </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis" style="color: rgb(20, 116, 172) !important;">Front end web
+        development.</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">As I told you I'm learning and practicing Fullstack web development so front end is one of
+          the things that I'm learning .
+          I also wanna tell you who is teaching me how to code , her name is Dr.Angela yu her lessons are worlds highest
+          rated lessons
+          so what I'm trying to say is you don't need to worry about my skills. You can say <mark>"LIKE A TEACHER LIKE A
+            STUDENT"</mark>
+          You need to rely on my skills.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <button type="button"
+            class="btn btn-primary btn-lg px-4 me-sm-3">I'll rely on your skill</button> <button type="button"
+            class="btn btn-outline-success btn-lg px-4">I won't rely on your skill</button> </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 70vh;">
+        <div class="container px-5">
+          <img src="./IMG_20240720_203153_098.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+            width="85%" height="100%" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="color: rgb(20, 116, 172) !important;">
+            Back-end web development</h1>
+          <p class="lead">Not only am I good at front-end Web development , but also I'm good at back-end web web
+            development.
+            As I told you I'm learning full stack web development. So I told you a little about who I am and what I'm
+            capable of
+            now it's time to get to work. </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
+              class="btn btn-outline-success btn-lg px-4 me-md-2">I wanna work with you</button> <button type="button"
+              class="btn btn-danger btn-lg px-4">I don't wanna work with you</button> </div>
+        </div>
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img src="./20240720_114527.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="100%"
+            height="500" style="width: 450px;
+            height: 500px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 6px;" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3" style="color: rgb(20, 116, 172) !important;">How to
+            contact me</h1>
+          <p class="col-lg-10 fs-4">So if you decided to work with me , go ahead and contact me through your e-mail.
+            Trust me you won't regret working with me.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="form-floating mb-3"> <input type="email" class="form-control" id="floatingInput"
+                placeholder="name@example.com"> <label for="floatingInput">Email address</label> </div>
+            <div class="form-floating mb-3"> <input type="password" class="form-control" id="floatingPassword"
+                placeholder="Password"> <label for="floatingPassword">Password</label> </div>
+            <div class="checkbox mb-3"> <label> <input type="checkbox" value="remember-me"> Remember me
+              </label> </div> <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+            <hr class="my-4"> <small class="text-body-secondary">By clicking Sign up, you agree to the terms of
+              use.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-5 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-5" style="color: rgb(20, 116, 172) !important;">Let's
+            get to work.</h1>
+          <p class="lead">It's time to work now so I need your brief information when you ask me to do
+            a website for you. Like for a Hotel or School or Telecom and so on.
+            I'm so happy working with you . Are you happy too?</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"> <button type="button"
+              class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Yep</button> <button type="button"
+              class="btn btn-outline-dark btn-lg px-4 ">Nahh</button> </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img class="rounded-lg-3" src="./IMG_20250815_103849_186.jpg" alt="" width="450">
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white" style="color: rgb(20, 116, 172) !important;">What do you think about my
+          website?</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">I've tried for about three years to beocme a wedeveloper. I hope it is paying me back
+            now.
+            It's a beautiful websie on argj
+          </p>
+
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
+              class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button> <button type="button"
+              class="btn btn-outline-light btn-lg px-4">Secondary</button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider mb-0"></div>
+  </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>
