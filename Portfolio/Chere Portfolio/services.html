@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Cherinet Portfolio</title>
+    <link rel="stylesheet" href="cherinet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .services-hero {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .services-hero {
+                padding: 4rem 3rem;
+            }
+        }
+
+        .services-hero-grid {
+            display: grid;
+            gap: 2rem;
+            align-items: end;
+        }
+
+        @media (min-width: 1024px) {
+            .services-hero-grid {
+                grid-template-columns: 0.95fr 1.05fr;
+            }
+        }
+
+        .services-hero-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--slate-900);
+        }
+
+        @media (min-width: 640px) {
+            .services-hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-hero-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .services-hero-text {
+            font-size: 1rem;
+            line-height: 2;
+            color: var(--slate-600);
+        }
+
+        @media (min-width: 640px) {
+            .services-hero-text {
+                font-size: 1.125rem;
+            }
+        }
+
+        .services-full-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-full-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .services-full-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-full-card {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 2.5rem 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-full-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.1);
+        }
+
+        .service-full-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-full-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--slate-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-full-count {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+
+        .service-full-text {
+            font-size: 0.875rem;
+            line-height: 1.85;
+            color: var(--slate-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            background: #f7f3ea;
+            border-radius: 1.5rem;
+            padding: 1.25rem;
+        }
+
+        .service-feature {
+            font-size: 0.875rem;
+            line-height: 2;
+            color: var(--slate-600);
+        }
+
+        .service-feature::before {
+            content: '✓ ';
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        .pricing-section {
+            background: linear-gradient(180deg, #fbf7ee 0%, #f4efdf 100%);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .pricing-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .pricing-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 1.75rem;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--teal);
+            box-shadow: 0 8px 30px rgba(15, 118, 110, 0.15);
+        }
+
+        .pricing-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--slate-900);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--slate-900);
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--slate-500);
+        }
+
+        .pricing-features {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .pricing-feature {
+            font-size: 0.875rem;
+            line-height: 2.2;
+            color: var(--slate-600);
+        }
+
+        .pricing-feature::before {
+            content: '• ';
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        .pricing-btn {
+            margin-top: 1.5rem;
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pricing-btn-outline {
+            background: transparent;
+            border: 2px solid var(--teal);
+            color: var(--teal);
+        }
+
+        .pricing-btn-outline:hover {
+            background: var(--teal);
+            color: var(--white);
+        }
+
+        .pricing-btn-filled {
+            background: var(--teal);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+        }
+
+        .pricing-btn-filled:hover {
+            background: #0d9488;
+            transform: translateY(-2px);
+        }
+
+        .tools-section {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .tools-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .tools-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .tool-item {
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            background: #f7f3ea;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .tool-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .tool-type {
+            font-size: 0.75rem;
+            color: var(--slate-500);
+            margin-top: 0.25rem;
+        }
+
+        .services-cta {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 34px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 25px 70px rgba(15, 23, 42, 0.35);
+        }
+
+        @media (min-width: 640px) {
+            .services-cta {
+                padding: 4rem 3rem;
+            }
+        }
+
+        .services-cta-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            max-width: 36rem;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 640px) {
+            .services-cta-title {
+                font-size: 3rem;
+            }
+        }
+
+        .services-cta-text {
+            margin-top: 1.25rem;
+            font-size: 1.125rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-cta-btn {
+            margin-top: 2rem;
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            background: var(--mustard);
+            color: var(--slate-900);
+            font-size: 1rem;
+            font-weight: 700;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .services-cta-btn:hover {
+            background: var(--mustard-light);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <a href="Cherinet.html" class="logo">Cherinet</a>
+                    <nav class="nav-desktop">
+                        <a href="Cherinet.html" class="nav-link">Home</a>
+                        <a href="services.html" class="nav-link active">(Services)</a>
+                        <a href="works.html" class="nav-link">Works</a>
+                        <a href="notes.html" class="nav-link">Notes</a>
+                        <a href="experience.html" class="nav-link">Experience</a>
+                    </nav>
+                    <div class="header-contact">
+                        <span class="phone">+251 949 668 873</span>
+                        <a href="experience.html" class="phone-icon">📞</a>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="Cherinet.html" class="mobile-nav-link">Home</a>
+                    <a href="services.html" class="mobile-nav-link active">Services</a>
+                    <a href="works.html" class="mobile-nav-link">Works</a>
+                    <a href="notes.html" class="mobile-nav-link">Notes</a>
+                    <a href="experience.html" class="mobile-nav-link">Experience</a>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Services Hero -->
+                <section class="services-hero">
+                    <div class="services-hero-grid">
+                        <div>
+                            <div class="eyebrow-badge">Services</div>
+                            <h1 class="services-hero-title">Creative solutions designed to elevate your brand.</h1>
+                        </div>
+                        <p class="services-hero-text">From pixel-perfect websites to complete brand identity systems, I
+                            offer end-to-end design services that help businesses stand out, connect with their
+                            audience, and grow with confidence.</p>
+                    </div>
+                </section>
+
+                <!-- Full Services Grid -->
+                <section class="services-full-grid">
+                    <div class="service-full-card">
+                        <div class="service-full-icon teal-gradient">💻</div>
+                        <h2 class="service-full-title">Website Design</h2>
+                        <p class="service-full-count">76 Projects Completed</p>
+                        <p class="service-full-text">Beautiful, responsive websites that convert visitors into clients.
+                            Every page is crafted with purpose, visual hierarchy, and user experience in mind.</p>
+                        <div class="service-features">
+                            <p class="service-feature">Custom responsive layouts</p>
+                            <p class="service-feature">SEO-optimized structure</p>
+                            <p class="service-feature">Performance optimization</p>
+                            <p class="service-feature">CMS integration</p>
+                            <p class="service-feature">Cross-browser testing</p>
+                        </div>
+                    </div>
+
+                    <div class="service-full-card">
+                        <div class="service-full-icon amber-gradient">📱</div>
+                        <h2 class="service-full-title">Mobile App Design</h2>
+                        <p class="service-full-count">63 Projects Completed</p>
+                        <p class="service-full-text">Intuitive mobile experiences that users love. From wireframes to
+                            polished UI, I create apps that feel native, fast, and delightful on every device.</p>
+                        <div class="service-features">
+                            <p class="service-feature">iOS & Android design</p>
+                            <p class="service-feature">Interactive prototypes</p>
+                            <p class="service-feature">User flow mapping</p>
+                            <p class="service-feature">Usability testing</p>
+                            <p class="service-feature">Design system creation</p>
+                        </div>
+                    </div>
+
+                    <div class="service-full-card">
+                        <div class="service-full-icon rose-gradient">✨</div>
+                        <h2 class="service-full-title">Brand Identity</h2>
+                        <p class="service-full-count">47 Projects Completed</p>
+                        <p class="service-full-text">Complete visual identity systems that make your brand recognizable,
+                            trustworthy, and memorable across every touchpoint and platform.</p>
+                        <div class="service-features">
+                            <p class="service-feature">Logo & wordmark design</p>
+                            <p class="service-feature">Color & typography system</p>
+                            <p class="service-feature">Brand guidelines book</p>
+                            <p class="service-feature">Social media templates</p>
+                            <p class="service-feature">Print & digital assets</p>
+                        </div>
+                    </div>
+
+                    <div class="service-full-card">
+                        <div class="service-full-icon"
+                            style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);">🎨</div>
+                        <h2 class="service-full-title">UI/UX Design</h2>
+                        <p class="service-full-count">52 Projects Completed</p>
+                        <p class="service-full-text">Research-driven interface design that balances business goals with
+                            user needs. Every interaction is tested, refined, and optimized for results.</p>
+                        <div class="service-features">
+                            <p class="service-feature">User research & personas</p>
+                            <p class="service-feature">Information architecture</p>
+                            <p class="service-feature">Wireframing & prototyping</p>
+                            <p class="service-feature">A/B testing support</p>
+                            <p class="service-feature">Accessibility compliance</p>
+                        </div>
+                    </div>
+
+                    <div class="service-full-card">
+                        <div class="service-full-icon"
+                            style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">📸</div>
+                        <h2 class="service-full-title">Creative Direction</h2>
+                        <p class="service-full-count">31 Projects Completed</p>
+                        <p class="service-full-text">Strategic visual leadership for campaigns, product launches, and
+                            brand refreshes. I guide the creative vision from concept to final execution.</p>
+                        <div class="service-features">
+                            <p class="service-feature">Campaign concept & mood boards</p>
+                            <p class="service-feature">Photo & video direction</p>
+                            <p class="service-feature">Content strategy</p>
+                            <p class="service-feature">Launch planning</p>
+                            <p class="service-feature">Team collaboration</p>
+                        </div>
+                    </div>
+
+                    <div class="service-full-card">
+                        <div class="service-full-icon"
+                            style="background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);">📊</div>
+                        <h2 class="service-full-title">Design Consulting</h2>
+                        <p class="service-full-count">28 Projects Completed</p>
+                        <p class="service-full-text">Expert design advice for teams and businesses looking to improve
+                            their visual presence, streamline processes, and level up quality.</p>
+                        <div class="service-features">
+                            <p class="service-feature">Design audits & reviews</p>
+                            <p class="service-feature">Team training & workshops</p>
+                            <p class="service-feature">Process optimization</p>
+                            <p class="service-feature">Tool & workflow setup</p>
+                            <p class="service-feature">Ongoing mentorship</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools Section -->
+                <section class="tools-section">
+                    <h2 class="section-title" style="text-align: center;">Tools I work with</h2>
+                    <p class="section-subtitle" style="text-align: center; margin-top: 0.5rem;">Professional-grade tools
+                        for professional-grade results.</p>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <div class="tool-icon">🎨</div>
+                            <p class="tool-name">Figma</p>
+                            <p class="tool-type">Design & Prototype</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">🖌️</div>
+                            <p class="tool-name">Photoshop</p>
+                            <p class="tool-type">Image Editing</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">✏️</div>
+                            <p class="tool-name">Illustrator</p>
+                            <p class="tool-type">Vector Design</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">📐</div>
+                            <p class="tool-name">Sketch</p>
+                            <p class="tool-type">UI Design</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">🎬</div>
+                            <p class="tool-name">After Effects</p>
+                            <p class="tool-type">Motion Design</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">💎</div>
+                            <p class="tool-name">InDesign</p>
+                            <p class="tool-type">Print Layout</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">⚡</div>
+                            <p class="tool-name">Webflow</p>
+                            <p class="tool-type">No-Code Build</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="tool-icon">🔧</div>
+                            <p class="tool-name">VS Code</p>
+                            <p class="tool-type">Development</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing Section -->
+                <section class="pricing-section">
+                    <h2 class="section-title" style="text-align: center;">Simple, transparent pricing</h2>
+                    <p class="section-subtitle" style="text-align: center; margin-top: 0.5rem;">Choose the package that
+                        fits your needs. Custom quotes also available.</p>
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <p class="pricing-label">Starter</p>
+                            <h3 class="pricing-name">Single Page</h3>
+                            <p class="pricing-price">$1,200 <span>/ project</span></p>
+                            <div class="pricing-features">
+                                <p class="pricing-feature">One-page website</p>
+                                <p class="pricing-feature">Responsive design</p>
+                                <p class="pricing-feature">2 revision rounds</p>
+                                <p class="pricing-feature">Basic SEO setup</p>
+                                <p class="pricing-feature">1 week delivery</p>
+                            </div>
+                            <a href="experience.html" class="pricing-btn pricing-btn-outline">Get Started</a>
+                        </div>
+                        <div class="pricing-card featured">
+                            <p class="pricing-label">⭐ Most Popular</p>
+                            <h3 class="pricing-name">Full Website</h3>
+                            <p class="pricing-price">$3,500 <span>/ project</span></p>
+                            <div class="pricing-features">
+                                <p class="pricing-feature">Up to 8 pages</p>
+                                <p class="pricing-feature">Custom illustrations</p>
+                                <p class="pricing-feature">5 revision rounds</p>
+                                <p class="pricing-feature">Advanced SEO</p>
+                                <p class="pricing-feature">CMS integration</p>
+                                <p class="pricing-feature">3 week delivery</p>
+                            </div>
+                            <a href="experience.html" class="pricing-btn pricing-btn-filled">Get Started</a>
+                        </div>
+                        <div class="pricing-card">
+                            <p class="pricing-label">Enterprise</p>
+                            <h3 class="pricing-name">Brand + Web</h3>
+                            <p class="pricing-price">$7,500 <span>/ project</span></p>
+                            <div class="pricing-features">
+                                <p class="pricing-feature">Complete brand identity</p>
+                                <p class="pricing-feature">Unlimited pages</p>
+                                <p class="pricing-feature">Unlimited revisions</p>
+                                <p class="pricing-feature">Motion & animation</p>
+                                <p class="pricing-feature">Ongoing support</p>
+                                <p class="pricing-feature">6 week delivery</p>
+                            </div>
+                            <a href="experience.html" class="pricing-btn pricing-btn-outline">Get Started</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services CTA -->
+                <section class="services-cta">
+                    <h2 class="services-cta-title">Ready to start your project?</h2>
+                    <p class="services-cta-text">Let's discuss your vision and create something truly remarkable
+                        together. No commitment required — just a friendly conversation.</p>
+                    <a href="experience.html" class="services-cta-btn">Start a Conversation →</a>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <span class="footer-logo">Cherinet</span>
+                        <span>© 2026. All Rights Reserved.</span>
+                    </div>
+                    <div class="footer-right">
+                        <span>Currently viewing: Services</span>
+                        <a href="services.html" class="footer-link">Back to Home</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="cherinet.js"></script>
+</body>
+
+</html>

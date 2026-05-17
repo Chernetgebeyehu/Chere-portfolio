@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherinet | Future Software Engineer</title>
+  <link rel="stylesheet" href="Portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Cherinet<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">Hello, I'm</p>
+      <h1 class="hero-name reveal">Cherinet Gebeyehu</h1>
+      <h2 class="hero-title">
+        <span id="typing"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-description reveal">
+        A passionate student from Ethiopia on a mission to become a world-class software engineer.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Certificates</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="93">0</span><span>%</span>
+          <span class="stat-label">Avg. Grade</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="2">0</span><span>+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-number">01.</span> About Me
+      </h2>
+      <div class="about-content">
+        <div class="about-text reveal">
+          <p>
+            I am a <strong>Grade 12 student from Ethiopia</strong> with a burning passion for technology and software
+            development. Despite limited resources, I have taught myself programming through online courses and am
+            determined to use technology to transform my future.
+          </p>
+          <p>
+            My journey started with curiosity about how apps work. That curiosity led me to complete <strong>4
+              professional certifications</strong> from Udacity, covering AI, Data Analysis, Programming, and Android
+            Development.
+          </p>
+          <p>
+            I believe education is the key to breaking barriers. My goal is to study <strong>Software
+              Engineering</strong> abroad and return to contribute to Ethiopia's growing tech ecosystem.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Grade 12 Student</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Ethiopia</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-code"></i>
+              <span>Self-Taught Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image reveal">
+          <div class="image-frame">
+            <img src="./my-picture-selfi.jpg" alt="Your Name" class="profile-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-number">02.</span> My Skills
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3>HTML5</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3>CSS3</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <h3>JavaScript</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="75"></div>
+          </div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python Basics</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="60"></div>
+          </div>
+          <span class="skill-percent">60%</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fab fa-android"></i>
+          </div>
+          <h3>Android Basics</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="65"></div>
+          </div>
+          <span class="skill-percent">65%</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>AI Fundamentals</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" data-progress="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-number">03.</span> My Projects
+      </h2>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>My personal portfolio showcasing my skills, projects, and certificates. Built from scratch with
+              responsive design.</p>
+            <div class="project-3inks">
+              <a href="../Chere Portfolio/Cherinet.html" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-image">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>CSS</span>
+            </div>
+            <h3>Calculator App</h3>
+            <p>A functional calculator with a clean UI. Supports basic arithmetic operations with keyboard input.</p>
+            <div class="project-links">
+              <a href="./Calculator/calculator.html" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card coming-soon reveal">
+          <div class="project-image">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>Coming Soon</span>
+            </div>
+            <h3>Mobile App</h3>
+            <p>An Android application currently in development. Stay tuned for updates!</p>
+            <div class="project-links">
+              <a href="app2.html" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES SECTION -->
+  <section class="section section-dark" id="certificates">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-number">04.</span> Certificates
+      </h2>
+      <p class="section-subtitle reveal">Professional certifications from Udacity</p>
+      <div class="certificates-grid">
+        <div class="certificate-card reveal">
+          <div class="certificate-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="certificate-content">
+            <h3>AI Fundamentals</h3>
+            <p class="certificate-issuer">
+              <i class="fas fa-building"></i> Udacity
+            </p>
+            <p class="certificate-date">
+              <i class="fas fa-calendar"></i> 2024
+            </p>
+          </div>
+          <a href="https://www.udacity.com/certificate/e/d17398b8-1255-11f1-bc9c-7fa521ffb75d" target="_blank"
+            class="certificate-link">
+            <i class="fas fa-external-link-alt"></i> Verify
+          </a>
+        </div>
+        <div class="certificate-card reveal">
+          <div class="certificate-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="certificate-content">
+            <h3>Data Analysis Fundamentals</h3>
+            <p class="certificate-issuer">
+              <i class="fas fa-building"></i> Udacity
+            </p>
+            <p class="certificate-date">
+              <i class="fas fa-calendar"></i> 2024
+            </p>
+          </div>
+          <a href="https://www.udacity.com/certificate/e/be068d7c-1272-11f1-baff-53e9487f4847" target="_blank"
+            class="certificate-link">
+            <i class="fas fa-external-link-alt"></i> Verify
+          </a>
+        </div>
+        <div class="certificate-card reveal">
+          <div class="certificate-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="certificate-content">
+            <h3>Programming Fundamentals</h3>
+            <p class="certificate-issuer">
+              <i class="fas fa-building"></i> Udacity
+            </p>
+            <p class="certificate-date">
+              <i class="fas fa-calendar"></i> 2024
+            </p>
+          </div>
+          <a href="https://www.udacity.com/certificate/e/795efb5a-1191-11f1-b576-e334eeb167e3" target="_blank"
+            class="certificate-link">
+            <i class="fas fa-external-link-alt"></i> Verify
+          </a>
+        </div>
+        <div class="certificate-card reveal">
+          <div class="certificate-icon">
+            <i class="fab fa-android"></i>
+          </div>
+          <div class="certificate-content">
+            <h3>Android Development</h3>
+            <p class="certificate-issuer">
+              <i class="fas fa-building"></i> Udacity
+            </p>
+            <p class="certificate-date">
+              <i class="fas fa-calendar"></i> 2024
+            </p>
+          </div>
+          <a href="https://www.udacity.com/certificate/e/c01335ec-117e-11f1-ba5e-dfdc567bb3b8" target="_blank"
+            class="certificate-link">
+            <i class="fas fa-external-link-alt"></i> Verify
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-number">05.</span> Get In Touch
+      </h2>
+      <p class="section-subtitle reveal">
+        I'm currently looking for scholarship opportunities to study Software Engineering abroad.
+        Feel free to reach out!
+      </p>
+      <div class="contact-content">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>chernetgebeyehu11@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Ethiopia</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Status</h4>
+              <p>Seeking Scholarships</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Chernetgebeyehu" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/cherinet-gebeyehu-2bb13b3b9" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://t.me/chere_boy" target="_blank" class="social-link" title="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="mailto:chernetgebeyehu11@gmail.com" class="social-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://instagram.com/chere_boy18" target="_blank" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" required>
+            <label for="name">Your Name</label>
+            <span class="input-highlight"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required>
+            <label for="email">Your Email</label>
+            <span class="input-highlight"></span>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" required></textarea>
+            <label for="message">Your Message</label>
+            <span class="input-highlight"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          Designed & Built by <strong>Cherinet Gebeyehu</strong> with 💙
+        </p>
+        <p class="footer-quote">
+          "The only way to do great work is to love what you do."
+        </p>
+        <p class="footer-copyright">
+          © 2026 All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="portfolio.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("MoQhuA_r-05s7frDK");
+    })();
+  </script>
+</body>
+
+</html>

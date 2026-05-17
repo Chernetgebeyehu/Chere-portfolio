@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - Cherinet Portfolio</title>
+    <link rel="stylesheet" href="Cherinet.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Brush+Script+MT&display=swap"
+        rel="stylesheet">
+    <style>
+        .works-hero {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .works-hero {
+                padding: 4rem 3rem;
+            }
+        }
+
+        .works-hero-grid {
+            display: grid;
+            gap: 2rem;
+            align-items: end;
+        }
+
+        @media (min-width: 1024px) {
+            .works-hero-grid {
+                grid-template-columns: 0.95fr 1.05fr;
+            }
+        }
+
+        .works-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--slate-900);
+        }
+
+        @media (min-width: 640px) {
+            .works-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .works-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .works-description {
+            font-size: 1rem;
+            line-height: 2;
+            color: var(--slate-600);
+        }
+
+        @media (min-width: 640px) {
+            .works-description {
+                font-size: 1.125rem;
+            }
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.1);
+        }
+
+        .project-image {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--teal);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--slate-900);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-description {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features {
+            background: #f7f3ea;
+            border-radius: 1.5rem;
+            padding: 1.25rem;
+        }
+
+        .project-feature {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+        }
+
+        .project-feature::before {
+            content: '• ';
+            color: var(--teal);
+            font-weight: 700;
+        }
+
+        .features-section {
+            background: linear-gradient(180deg, #fbf7ee 0%, #f4efdf 100%);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .features-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .features-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+        }
+
+        .gallery-section {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .gallery-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .gallery-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .gallery-item {
+            border-radius: 1.75rem;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <a href="Cherinet.html" class="logo">Cherinet</a>
+                    <nav class="nav-desktop">
+                        <a href="Cherinet.html" class="mobile-nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="works.html" class="nav-link active">(Works)</a>
+                        <a href="notes.html" class="nav-link">Notes</a>
+                        <a href="experience.html" class="nav-link">Experience</a>
+                    </nav>
+                    <div class="header-contact">
+                        <span class="phone">+251 949 668 873</span>
+                        <a href="experience.html" class="phone-icon">📞</a>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="Cherinet.html" class="mobile-nav-link">Home</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="works.html" class="mobile-nav-link active">Works</a>
+                    <a href="notes.html" class="mobile-nav-link">Notes</a>
+                    <a href="experience.html" class="mobile-nav-link">Experience</a>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Works Hero -->
+                <section class="works-hero">
+                    <div class="works-hero-grid">
+                        <div>
+                            <div class="eyebrow-badge">Portfolio</div>
+                            <h1 class="works-title">Selected work presented with a richer, more editorial showcase.</h1>
+                        </div>
+                        <p class="works-description">Instead of only a small works block, this page expands the
+                            experience with dedicated project cards, visual color stories, feature highlights, and room
+                            for future case studies.</p>
+                    </div>
+                </section>
+
+                <!-- Projects Grid -->
+                <section class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/landing-page-gig.png" alt="Editorial Portfolio" class="project-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=400&fit=crop'">
+                        <div class="project-content">
+                            <p class="project-category">Web Design</p>
+                            <h2 class="project-title">Editorial Portfolio Experience</h2>
+                            <p class="project-description">A premium visual identity site with layered motion, narrative
+                                sections, and elegant typography.</p>
+                            <div class="project-features">
+                                <p class="project-feature">Story-driven layout</p>
+                                <p class="project-feature">Animated showcase</p>
+                                <p class="project-feature">Luxury presentation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/pc-with-web,on,it.png" alt="Creative Agency" class="project-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'">
+                        <div class="project-content">
+                            <p class="project-category">Brand + UI</p>
+                            <h2 class="project-title">Creative Agency Launch</h2>
+                            <p class="project-description">A modern agency website built to highlight services, results,
+                                testimonials, and clear calls-to-action.</p>
+                            <div class="project-features">
+                                <p class="project-feature">Brand system</p>
+                                <p class="project-feature">Service funnels</p>
+                                <p class="project-feature">Lead generation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="images/coding-by-pc.jpg" alt="Product Campaign" class="project-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop'">
+                        <div class="project-content">
+                            <p class="project-category">Conversion Design</p>
+                            <h2 class="project-title">Product Campaign Landing Page</h2>
+                            <p class="project-description">A high-impact experience focused on trust, customer proof,
+                                and frictionless user flow.</p>
+                            <div class="project-features">
+                                <p class="project-feature">Hero optimization</p>
+                                <p class="project-feature">Trust blocks</p>
+                                <p class="project-feature">CRO structure</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="features-section">
+                    <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">What makes these projects
+                        stand out</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3 class="feature-title">Premium composition</h3>
+                            <p class="feature-text">Large visual rhythm, soft cards, layered backgrounds, and striking
+                                contrast.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-title">Clear hierarchy</h3>
+                            <p class="feature-text">Headings, subtext, and calls-to-action are arranged to guide users
+                                naturally.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-title">Human presence</h3>
+                            <p class="feature-text">Portrait-based storytelling gives the site warmth and a stronger
+                                personal connection.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3 class="feature-title">Expandable structure</h3>
+                            <p class="feature-text">Future sections and case studies can be added without breaking the
+                                visual system.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section class="gallery-section">
+                    <h2 class="section-title">Future gallery ready</h2>
+                    <p class="section-subtitle"
+                        style="margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.75; color: var(--slate-500);">
+                        This area can hold more of your photo-based brand moments, behind-the-scenes portraits, project
+                        screenshots, or campaign images as you continue growing the website.</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/my-picture-gemini.png" alt="Gallery image 1" class="gallery-img"
+                                onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop'">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/people-on-meeting.jpg" alt="Gallery image 2" class="gallery-img"
+                                onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop'">
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <span class="footer-logo">Cherinet</span>
+                        <span>© 2026. All Rights Reserved.</span>
+                    </div>
+                    <div class="footer-right">
+                        <span>Currently viewing: Works</span>
+                        <a href="works.html" class="footer-link">Back to Home</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="Cherinet.js"></script>
+</body>
+
+</html>

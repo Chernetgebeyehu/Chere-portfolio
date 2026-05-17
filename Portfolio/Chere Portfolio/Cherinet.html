@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherinet - Creative Designer Portfolio</title>
+    <link rel="stylesheet" href="cherinet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <a href="Cherinet.html" class="logo">Cherinet</a>
+                    <nav class="nav-desktop">
+                        <a href="Cherinet.html" class="nav-link active">(Home)</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="works.html" class="nav-link">Works</a>
+                        <a href="notes.html" class="nav-link">Notes</a>
+                        <a href="experience.html" class="nav-link">Experience</a>
+                    </nav>
+                    <div class="header-contact">
+                        <span class="phone">+251 949 668 873</span>
+                        <a href="experience.html" class="phone-icon">📞</a>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="Cherinet.html" class="mobile-nav-link active">Home</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="works.html" class="mobile-nav-link">Works</a>
+                    <a href="notes.html" class="mobile-nav-link">Notes</a>
+                    <a href="experience.html" class="mobile-nav-link">Experience</a>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-grid">
+                        <div class="hero-left">
+                            <div class="hero-card">
+                                <div class="hero-content-grid">
+                                    <div class="hero-text">
+                                        <div class="eyebrow-badge">Welcome to my portfolio</div>
+                                        <h1 class="hero-title">Hey There,<br>I'm <span class="highlight">Cherinet</span>
+                                        </h1>
+                                        <p class="hero-description">I design beautifully simple things, And I love what
+                                            I do. I create digital experiences with a premium visual language,
+                                            thoughtful structure, and a strong personal identity.</p>
+                                        <div class="hero-contact">
+                                            <a href="mailto:chernetgebeyehu11@gmail.com"
+                                                class="email-link">chernetgebeyehu11@gmail.com</a>
+                                            <span class="availability-badge">Available for freelance</span>
+                                        </div>
+                                        <div class="hero-buttons">
+                                            <a href="works.html" class="btn-primary">View My Work</a>
+                                            <a href="experience.html" class="btn-secondary">Get In Touch</a>
+                                        </div>
+                                    </div>
+                                    <div class="hero-side">
+                                        <p class="side-text">I design beautifully simple things, And I love what i do. I
+                                            build elegant, visually rich websites that feel editorial, modern, and
+                                            deeply personal.</p>
+                                        <div class="badge-card">
+                                            <div class="badge-header">
+                                                <div class="badge-icon">🌳</div>
+                                                <div>
+                                                    <p class="badge-title">IDF Certified</p>
+                                                    <p class="badge-subtitle">Professional UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="badge-text">Certified professional with 10+ years of experience
+                                                creating premium digital products.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Portrait Area -->
+                                <div class="portrait-container">
+                                    <div class="brush-effect"></div>
+                                    <div class="experience-card">
+                                        <span class="exp-number">10</span>
+                                        <span class="exp-label">Years<br>Experience</span>
+                                    </div>
+                                    <div class="certification-card">
+                                        <div class="cert-icon">🏅</div>
+                                        <p class="cert-label">IDF Certified</p>
+                                        <p class="cert-title">Professional<br>UI/UX Designer</p>
+                                    </div>
+                                    <div class="portrait-frame">
+                                        <img src="images/my-picture-AA.jpg" alt="Cherinet portrait" class="portrait-img"
+                                            onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=560&h=700&fit=crop'">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-right">
+                            <!-- Stats Card -->
+                            <div class="right-card">
+                                <div class="eyebrow">At a glance</div>
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <div class="stat-value">10</div>
+                                        <div class="stat-label">Years experience</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">285+</div>
+                                        <div class="stat-label">Projects completed</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">190+</div>
+                                        <div class="stat-label">Happy clients</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">24</div>
+                                        <div class="stat-label">Awards & features</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Timeline -->
+                            <div class="right-card">
+                                <h2 class="card-title">My Work Experience</h2>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            <p class="company">Self-Employed, Brisbane</p>
+                                            <p class="period">Sep 2016 — Aug 2014</p>
+                                        </div>
+                                        <div class="timeline-dot teal"></div>
+                                        <div class="timeline-content">
+                                            <h3 class="role">Visual Designer</h3>
+                                            <p class="description">A visual designer creates designs for a variety of
+                                                platforms, which may include Internet and intranet sites, games, movies,
+                                                kiosks and wearables.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            <p class="company">New Man Services</p>
+                                            <p class="period">Jan 17 — Mar 2018</p>
+                                        </div>
+                                        <div class="timeline-dot orange"></div>
+                                        <div class="timeline-content">
+                                            <h3 class="role">UI/UX Designer</h3>
+                                            <p class="description">User interface design or user interface engineering
+                                                is the design of user interfaces for machines and software, such as
+                                                computers, home appliances, mobile devices.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            <p class="company">Global Solution</p>
+                                            <p class="period">Feb 2019 — Mar 2020</p>
+                                        </div>
+                                        <div class="timeline-dot amber"></div>
+                                        <div class="timeline-content">
+                                            <h3 class="role">Sr. Product Designer</h3>
+                                            <p class="description">Find Product Photography Canada. Large Selection.
+                                                Always Sale. Cheap Prices. Full Offer. Save Online. Compare Online.
+                                                Simple Search. The Best Price. Compare Simply.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FULL WIDTH SECTIONS (below the hero two-column grid) -->
+
+                    <!-- Latest Works - Full Width -->
+                    <div class="full-width-card">
+                        <div class="card-header">
+                            <div>
+                                <h2 class="card-title">My Latest Works</h2>
+                                <p class="card-subtitle">Perfect solution for digital experience</p>
+                            </div>
+                            <a href="works.html" class="explore-link">Explore More Works →</a>
+                        </div>
+                        <div class="works-full-grid">
+                            <div class="work-card-full">
+                                <div class="work-gradient amber"></div>
+                                <div class="work-content">
+                                    <h3 class="work-title">App Design</h3>
+                                    <p class="work-category">Food Delivery App</p>
+                                    <p class="work-description">A modern mobile experience designed for speed, clarity,
+                                        and seamless food ordering.</p>
+                                </div>
+                            </div>
+                            <div class="work-card-full">
+                                <div class="work-gradient teal"></div>
+                                <div class="work-content">
+                                    <h3 class="work-title">Web Design</h3>
+                                    <p class="work-category">Agency Website</p>
+                                    <p class="work-description">A premium agency site with bold visuals, clear services,
+                                        and strong calls-to-action.</p>
+                                </div>
+                            </div>
+                            <div class="work-card-full">
+                                <div class="work-gradient"
+                                    style="background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #a855f7 100%);">
+                                </div>
+                                <div class="work-content">
+                                    <h3 class="work-title">Brand Identity</h3>
+                                    <p class="work-category">Startup Rebrand</p>
+                                    <p class="work-description">Complete visual identity system including logo, colors,
+                                        typography, and brand guidelines.</p>
+                                </div>
+                            </div>
+                            <div class="work-card-full">
+                                <div class="work-gradient"
+                                    style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);">
+                                </div>
+                                <div class="work-content">
+                                    <h3 class="work-title">Dashboard UI</h3>
+                                    <p class="work-category">Analytics Platform</p>
+                                    <p class="work-description">Data-rich dashboard with clean layout, dark mode, and
+                                        intuitive navigation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- People Talk About Us - Full Width -->
+                    <div class="full-width-card testimonials-full">
+                        <h2 class="card-title">People talk about us</h2>
+                        <p class="card-subtitle">I got a job that was in accordance with the salary and field of work.
+                        </p>
+                        <div class="testimonials-full-grid">
+                            <div class="testimonial-full-card">
+                                <div class="testimonial-avatar">AS</div>
+                                <div class="testimonial-full-body">
+                                    <h3 class="testimonial-name">Anamika Sandula</h3>
+                                    <p class="testimonial-role">Product Manager</p>
+                                    <p class="testimonial-quote">"A complete search of the Internet has found these
+                                        results satisfactory. It's the most popular phrase on the web."</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-full-card featured">
+                                <div class="testimonial-avatar">JA</div>
+                                <div class="testimonial-full-body">
+                                    <h3 class="testimonial-name">John Allendale</h3>
+                                    <p class="testimonial-role">Product Designer</p>
+                                    <p class="testimonial-quote">"A complete search of the Internet has found these
+                                        results satisfactory result is the most popular phrase on the web. You wouldn't
+                                        really say that it was satisfying!"</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-full-card">
+                                <div class="testimonial-avatar">SH</div>
+                                <div class="testimonial-full-body">
+                                    <h3 class="testimonial-name">Souther Hakcax</h3>
+                                    <p class="testimonial-role">Marketing Manager</p>
+                                    <p class="testimonial-quote">"A complete search of the Internet has found these
+                                        results satisfactory. You wouldn't really say that it was satisfying!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Services Preview -->
+                    <div class="services-section">
+                        <div class="services-grid">
+                            <div class="services-list">
+                                <div class="service-item">
+                                    <div class="service-icon teal-gradient">💻</div>
+                                    <h3 class="service-title">Website Design</h3>
+                                    <p class="service-count">76 Projects</p>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-icon amber-gradient">📱</div>
+                                    <h3 class="service-title">Mobile App Design</h3>
+                                    <p class="service-count">63 Projects</p>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-icon rose-gradient">✨</div>
+                                    <h3 class="service-title">Brand Identity</h3>
+                                    <p class="service-count">47 Projects</p>
+                                </div>
+                            </div>
+                            <div class="services-content">
+                                <h2 class="services-title">What do I help?</h2>
+                                <div class="services-text">
+                                    <p>I will help you with finding a solution and solve your problems. We use process
+                                        design to create digital products. Besides that also help their business.</p>
+                                    <p>We use process design to create digital products. Besides that also help their
+                                        business.</p>
+                                </div>
+                                <div class="services-stats">
+                                    <div class="services-stat">
+                                        <div class="stat-big">285+</div>
+                                        <div class="stat-label">Project Completed</div>
+                                    </div>
+                                    <div class="services-stat">
+                                        <div class="stat-big">190+</div>
+                                        <div class="stat-label">Happy Clients</div>
+                                    </div>
+                                </div>
+                                <a href="services.html" class="btn-primary"
+                                    style="margin-top: 1.5rem; display: inline-block;">View All Services →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Section -->
+                    <div class="home-cta">
+                        <div class="home-cta-grid">
+                            <div class="home-cta-left">
+                                <h2 class="cta-title">Let's make something amazing together.</h2>
+                                <p class="cta-text">Start by <a href="experience.html" class="cta-link">saying hi</a>
+                                </p>
+                            </div>
+                            <div class="cta-info">
+                                <div>
+                                    <p class="info-label">Information</p>
+                                    <p class="info-text">Adiss Ababa, Bolebulbula, Ethiopia</p>
+                                </div>
+                                <div class="info-links">
+                                    <a href="services.html">Services</a>
+                                    <a href="works.html">Works</a>
+                                    <a href="notes.html">Notes</a>
+                                    <a href="experience.html">Experience</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <span class="footer-logo">Cherinet</span>
+                        <span>© 2026. All Rights Reserved.</span>
+                    </div>
+                    <div class="footer-right">
+                        <span>Design by Drib Creative Agency</span>
+                        <a href="Cherinet.html" class="footer-link">Back to Top</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <a href="../Portfolio-For-Scholar/index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12" />
+      <polyline points="12 19 5 12 12 5" />
+    </svg>
+    Back to Portfolio
+  </a>
+
+    <script src="cherinet.js"></script>
+</body>
+
+</html>

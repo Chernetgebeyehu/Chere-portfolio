@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Cherinet Portfolio</title>
+    <link rel="stylesheet" href="cherinet.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Brush+Script+MT&display=swap"
+        rel="stylesheet">
+    <style>
+        .notes-hero {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .notes-hero {
+                padding: 4rem 3rem;
+            }
+        }
+
+        .notes-hero-grid {
+            display: grid;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (min-width: 1024px) {
+            .notes-hero-grid {
+                grid-template-columns: 0.95fr 1.05fr;
+            }
+        }
+
+        .notes-hero-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--slate-900);
+        }
+
+        @media (min-width: 640px) {
+            .notes-hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .notes-hero-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .notes-hero-text {
+            font-size: 1rem;
+            line-height: 2;
+            color: var(--slate-600);
+        }
+
+        @media (min-width: 640px) {
+            .notes-hero-text {
+                font-size: 1.125rem;
+            }
+        }
+
+        .articles-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.1);
+        }
+
+        .article-image {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--slate-500);
+            margin-bottom: 0.75rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--slate-900);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--orange);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .article-cta span {
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover .article-cta span {
+            transform: translateX(4px);
+        }
+
+        .values-section {
+            background: linear-gradient(180deg, #fbf7ee 0%, #f4efdf 100%);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .values-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .values-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .values-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--slate-900);
+            margin-bottom: 0.75rem;
+        }
+
+        .value-text {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+        }
+
+        .process-section {
+            background: var(--white);
+            border-radius: 34px;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+            padding: 3rem 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .process-section {
+                padding: 3rem 3rem;
+            }
+        }
+
+        .process-steps {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .process-step {
+            display: grid;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 1.75rem;
+            background: #f7f3ea;
+        }
+
+        @media (min-width: 768px) {
+            .process-step {
+                grid-template-columns: 72px 1fr;
+                align-items: start;
+            }
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--teal);
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .step-text {
+            font-size: 0.875rem;
+            line-height: 1.75;
+            color: var(--slate-600);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <a href="Cherinet.html" class="logo">Cherinet</a>
+                    <nav class="nav-desktop">
+                        <a href="Cherinet.html" class="mobile-nav-link">Home</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="works.html" class="nav-link active">(Works)</a>
+                        <a href="notes.html" class="nav-link">Notes</a>
+                        <a href="experience.html" class="nav-link">Experience</a>
+                    </nav>
+                    <div class="header-contact">
+                        <span class="phone">+251 949 668 873</span>
+                        <a href="experience.html" class="phone-icon">📞</a>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="Cherinet.html" class="mobile-nav-link">Home</a>
+                    <a href="services.html" class="mobile-nav-link">Services</a>
+                    <a href="works.html" class="mobile-nav-link active">Works</a>
+                    <a href="notes.html" class="mobile-nav-link">Notes</a>
+                    <a href="experience.html" class="mobile-nav-link">Experience</a>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Notes Hero -->
+                <section class="notes-hero">
+                    <div class="notes-hero-grid">
+                        <div>
+                            <div class="eyebrow-badge">Notes & Insights</div>
+                            <h1 class="notes-hero-title">A personal brand website with more depth, polish, and
+                                storytelling.</h1>
+                        </div>
+                        <div class="notes-hero-text">
+                            <p>This page expands far beyond the short reference layout by adding narrative sections, a
+                                stronger process, clearer positioning, and room for your own photography throughout.</p>
+                            <p style="margin-top: 1rem;">The visual language keeps the warm cream background, deep ink
+                                typography, soft orange and teal accents, and editorial spacing that made the original
+                                inspiration feel so striking.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Articles Grid -->
+                <section class="articles-grid">
+                    <article class="article-card">
+                        <img src="images/webpage.png" alt="Design article" class="article-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop'">
+                        <div class="article-content">
+                            <p class="article-date">December 15, 2025</p>
+                            <h2 class="article-title">Design that feels personal before it feels promotional</h2>
+                            <p class="article-excerpt">The strongest personal websites balance beauty and clarity. They
+                                create emotional connection first, then guide visitors into the work with confidence.
+                            </p>
+                            <a href="#" class="article-cta">Read article <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="images/portfolio-picture.png" alt="Photography article" class="article-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1554048612-387768052bf7?w=600&h=400&fit=crop'">
+                        <div class="article-content">
+                            <p class="article-date">December 10, 2025</p>
+                            <h2 class="article-title">Why photography changes everything</h2>
+                            <p class="article-excerpt">When your own portraits replace the sample imagery, the brand
+                                immediately becomes more believable, more memorable, and more unmistakably yours.</p>
+                            <a href="#" class="article-cta">Read article <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="images/binjam-picture.png" alt="Website strategy article" class="article-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'">
+                        <div class="article-content">
+                            <p class="article-date">December 5, 2025</p>
+                            <h2 class="article-title">A website should present, persuade, and continue the conversation
+                            </h2>
+                            <p class="article-excerpt">That is why the expanded pages include services, proof, process,
+                                and contact pathways rather than stopping at a single attractive homepage.</p>
+                            <a href="#" class="article-cta">Read article <span>→</span></a>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Values Section -->
+                <section class="values-section">
+                    <h2 class="section-title" style="text-align: center;">Values behind the work</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🎯</div>
+                            <h3 class="value-title">Clarity</h3>
+                            <p class="value-text">Clear messaging, clear structure, and clear purpose in every layout
+                                decision.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">✨</div>
+                            <h3 class="value-title">Beauty</h3>
+                            <p class="value-text">Elegant visuals that feel crafted, premium, warm, and distinctly
+                                personal.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🚀</div>
+                            <h3 class="value-title">Impact</h3>
+                            <p class="value-text">Design choices that help you present your work better and grow with
+                                confidence.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Process Section -->
+                <section class="process-section">
+                    <h2 class="section-title">My creative process</h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <div>
+                                <h3 class="step-title">Discover</h3>
+                                <p class="step-text">We align your goals, audience, offer, and brand voice so the design
+                                    direction starts with clarity.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <div>
+                                <h3 class="step-title">Design</h3>
+                                <p class="step-text">I shape a visual language that feels elevated, consistent, and
+                                    carefully structured for real users.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">03</div>
+                            <div>
+                                <h3 class="step-title">Refine</h3>
+                                <p class="step-text">Every section is improved through detailed iteration, hierarchy
+                                    tuning, and micro-interaction polish.</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">04</div>
+                            <div>
+                                <h3 class="step-title">Launch</h3>
+                                <p class="step-text">The final experience is optimized for presentation, engagement, and
+                                    long-term confidence in your brand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <span class="footer-logo">Cherinet</span>
+                        <span>© 2026. All Rights Reserved.</span>
+                    </div>
+                    <div class="footer-right">
+                        <span>Currently viewing: Notes</span>
+                        <a href="notes.html" class="footer-link">Back to Home</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="cherinet.js"></script>
+</body>
+
+</html>
